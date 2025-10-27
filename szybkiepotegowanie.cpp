@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-// Rozwiązanie iteracyjne
 int szybkibill(int baza, int wykladnik)
 {
 	int wynik = 1;
