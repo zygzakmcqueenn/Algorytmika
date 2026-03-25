@@ -1,11 +1,13 @@
 #include <iostream>
 using namespace std;
 
-int horner(int wsp[], int st, int x){
-	if(st == 0)
-	return wsp[0];
-	
-	return x * horner(wsp, st - 1, x) + wsp[st];
+int horner(int wsp[], int stopien, int x) {
+    int wynik = wsp[stopien]; 
+    for (int i = stopien - 1; i >= 0; i--) {
+        wynik = wynik * x + wsp[i];
+    }
+    
+    return wynik;
 }
 
 int main(){
