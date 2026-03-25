@@ -1,11 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int hornera(int wsp[], int st, int x){
+int horner(int wsp[], int st, int x){
 	if(st == 0)
 	return wsp[0];
 	
-	return x * hornera(wsp, st - 1, x) + wsp[st];
+	return x * horner(wsp, st - 1, x) + wsp[st];
 }
 
 int main(){
@@ -24,7 +24,7 @@ int main(){
 	cout << "Podaj argument: ";
 	cin >> x;
 	
-	int wynik = hornera(wspolczynnik, stopien, x);
+	int wynik = horner(wspolczynnik, stopien, x);
 	
 	cout << "W (" << x << ") = " << wynik << endl;
 	
